@@ -4,21 +4,21 @@ A complete library management system built with Node.js, Express, MySQL for the 
 
 ![Dashboard View](./screenshots/books_section.png)
 
-## Features
+## ✨ Features
 
 - Book inventory management
 - Member registration
 - Book issuing and returning
 - Responsive design
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Backend**: Node.js, Express
 - **Database**: MySQL
 - **Version Control**: Git/GitHub
 
-## Screenshots
+## 📸 Screenshots
 
 | Add Book | Book Section |
 |--------------|----------------|
@@ -32,25 +32,50 @@ A complete library management system built with Node.js, Express, MySQL for the 
 |-------------|----------|
 | ![Issue New Book](./screenshots/add_member_modal.png) | ![Book Transaction Section](./screenshots/transactions_section.png) |
 
-## Installation
+## 🚀 Getting Started
 
-1. Clone the repository:
+### Prerequisites
+- Node.js v18+
+- MySQL 8.0+
+- Git (optional)
+
+### Installation
+
+1. *Clone the repository:*
    ```bash
-   git clone https://github.com/yourusername/library-management-system.git
+   git clone https://github.com/MeenakshiMony/Library_Management_System.git
 
-2. Set up the database:
+2. *database setup:*
+   These commands are to run in Command prompt/ Powershell
    ```bash
-   mysql -u root -p < database/schema.sql
+   # Navigate to MySQL bin (if needed)
+   cd "C:\Program Files\MySQL\MySQL Server 9.1\bin"
 
-3. Install dependencies:
+   # Create database and tables
+   mysql -u root -p < "D:\Library_Management_System\database\schema.sql"
+
+   # Insert sample data (optional)
+   mysql -u root -p library_management < "D:\Library_Management_System\database\seed.sql"
+
+   Expected database:
+   ![Database](./screenshots/database_schema.png) 
+
+
+3. *Install dependencies:*
    ```bash
-   npm install 
+   # Navigate to your project root
+   cd D:\Library_Management_System
 
-4. Start the server:
+   # Install backend dependencies
+   npm install
+
+4. *Start the server:*
    ```bash
    npm run dev
 
-5. Open `http://127.0.0.1:5500/library-management/frontend/index.html` in your browser. 
+5. *Start frontend:*
+   ```bash
+   npm run serve-frontend
 
    
    

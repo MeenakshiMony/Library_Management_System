@@ -2,11 +2,12 @@
   "name": "library-management",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "backend/app.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node backend/app.js",
+    "dev": "nodemon backend/app.js",
+    "serve-frontend": "live-server frontend",
+    "dev-all": "concurrently \"npm run dev\" \"npm run serve-frontend\""
   },
   "keywords": [],
   "author": "",
@@ -14,9 +15,11 @@
   "type": "commonjs",
   "dependencies": {
     "body-parser": "^2.2.0",
+    "concurrently": "^9.1.2",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
+    "live-server": "^1.2.2",
     "mysql2": "^3.14.0"
   }
 }
