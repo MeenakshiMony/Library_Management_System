@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-book"></i> Library Management System</h1>
+            <nav>
+                <button id="show-books" class="active">Books</button>
+                <button id="show-members">Members</button>
+                <button id="show-transactions">Transactions</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Books Section -->
+        <section id="book-section" class="active-section">
+            <div class="section-header">
+                <h2><i class="fas fa-book-open"></i> Book Inventory</h2>
+                <button id="add-book-btn" class="add-btn">Add New Book</button>
+            </div>
+            <div id="book-list" class="card-container">
+                <!-- Books will be listed here -->
+            </div>
+        </section>
+
+        <!-- Members Section -->
+        <section id="member-section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Library Members</h2>
+                <button id="add-member-btn" class="add-btn">Add New Member</button>
+            </div>
+            <div id="member-list" class="card-container">
+                <!-- Members will be listed here -->
+            </div>
+        </section>
+
+        <!-- Transactions Section -->
+        <section id="transaction-section">
+            <div class="section-header">
+                <h2><i class="fas fa-exchange-alt"></i> Book Transactions</h2>
+                <button id="issue-book-btn" class="add-btn">Issue New Book</button>
+            </div>
+            <div id="transaction-list" class="card-container">
+                <!-- Transactions will be listed here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Add Book Modal -->
+    <div id="book-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Book</h2>
+            <form id="book-form">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" required>
+                </div>
+                <div class="form-group">
+                    <label for="publisher">Publisher:</label>
+                    <input type="text" id="publisher" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" min="1" required>
+                </div>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Member Modal -->
+    <div id="member-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Member</h2>
+            <form id="member-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone">
+                </div>
+                <button type="submit">Add Member</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Issue Book Modal -->
+    <div id="transaction-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Issue New Book</h2>
+            <form id="transaction-form">
+                <div class="form-group">
+                    <label for="member-id">Member ID:</label>
+                    <input type="number" id="member-id" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="book-id">Book ID:</label>
+                    <input type="number" id="book-id" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="issue-date">Issue Date:</label>
+                    <input type="date" id="issue-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="return-date">Return Date:</label>
+                    <input type="date" id="return-date" required>
+                </div>
+                <button type="submit">Issue Book</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
