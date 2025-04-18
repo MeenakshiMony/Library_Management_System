@@ -57,8 +57,8 @@ A complete library management system built with Node.js, Express, MySQL for the 
    # Insert sample data (optional)
    mysql -u root -p library_management < "D:\Library_Management_System\database\seed.sql"
 
-   Expected database:
-   ![Database](./screenshots/database_schema.png) 
+Expected database:
+![Database](./screenshots/database_schema.png) 
 
 
 3. *Install dependencies:*
