@@ -2,8 +2,6 @@
 
 A complete library management system built with Node.js, Express, MySQL for the backend and HTML/CSS/JavaScript for the frontend.
 
-![Dashboard View](./screenshots/books_section.png)
-
 ## ✨ Features
 
 - Book inventory management
@@ -58,6 +56,7 @@ A complete library management system built with Node.js, Express, MySQL for the 
    mysql -u root -p library_management < "D:\Library_Management_System\database\seed.sql"
 
 Expected database:
+
 ![Database](./screenshots/database_schema.png) 
 
 
