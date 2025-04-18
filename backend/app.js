@@ -1,18 +1,23 @@
+require('dotenv').config(); 
 const express = require('express');
 const mysql = require('mysql2');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = 3000;
-app.use(cors());
+const port = process.env.PORT || 3000;
+
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || '*' // Configure allowed origins
+}));
 
 // MySQL connection
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '12345678', // Replace with your MySQL root password
-  database: 'library_management'
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD, // Replace with your MySQL root password
+  database: 'library_management',
+  port: process.env.DB_PORT || 3306
 });
 
 db.connect((err) => {
