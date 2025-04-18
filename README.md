@@ -20,16 +20,38 @@ A complete library management system built with Node.js, Express, MySQL for the 
 
 ## Screenshots
 
-| Books Section | Members Section |
+| Add Book | Book Section |
 |--------------|----------------|
-| ![Books](./screenshots/books_section.png) | ![Members](./screenshots/members_section.png) |
+| ![Add Books](./screenshots/add_book_modal.png) | ![Books Section](./screenshots/books_section.png) |
 
-| Transactions | Add Book |
+| Add Member | Members Section |
 |-------------|----------|
-| ![Transactions](./screenshots/transactions-section.png) | ![Add Book](./screenshots/add-book-modal.png) |
+| ![Add Member](./screenshots/add_member_modal.png) | ![Members Section](./screenshots/members_section.png) |
+
+| Issue New Book | Book Transaction Section |
+|-------------|----------|
+| ![Issue New Book](./screenshots/add_member_modal.png) | ![Book Transaction Section](./screenshots/transactions_section.png) |
 
 ## Installation
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/library-management-system.git
+
+2. Set up the database:
+   ```bash
+   mysql -u root -p < database/schema.sql
+
+3. Install dependencies:
+   ```bash
+   npm install 
+
+4. Start the server:
+   ```bash
+   npm run dev
+
+5. Open `http://127.0.0.1:5500/library-management/frontend/index.html` in your browser. 
+
+   
+   
+   
