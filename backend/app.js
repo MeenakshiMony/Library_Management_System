@@ -14,7 +14,7 @@ app.use(cors({
 // MySQL connection
 const db = mysql.createConnection({
   host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER,
+  user: process.env.DB_USER, // Replace with your MySQL username
   password: process.env.DB_PASSWORD, // Replace with your MySQL root password
   database: 'library_management',
   port: process.env.DB_PORT || 3306
