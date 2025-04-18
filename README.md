@@ -57,7 +57,7 @@ A complete library management system built with Node.js, Express, MySQL for the 
 
 Expected database:
 
-![Database](./screenshots/database_schema.png) 
+<img src="./screenshots/database_schema.png" alt="Database Schema" width="700"> 
 
 
 3. *Install dependencies:*
